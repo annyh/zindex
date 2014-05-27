@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Change layering with z-index</title>
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    div {
+        width: 200px;
+        height: 100px;
+        padding: 5px;
+        position: relative;
+    }
+    div span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    div:first-child {
+        background: red;
+        z-index: 2;
+    }
+    div:nth-child(2) {
+        background: pink;
+        margin: -20px 0 -20px 40px;
+        z-index: 1;
+    }
+    div:nth-child(3) {
+        background: yellow;
+        margin-left: 80px;
+        z-index: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>z-index: 2</span>
+    </div>
+    <div>
+        <span>z-index: 1</span>
+    </div>
+    <div>
+        <span>z-index: 0</span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+div {
+  width: 200px;
+  height: 100px;
+  padding: 5px;
+  position: relative;
+}
+div:first-child {
+  background: red;
+
+}
+div:nth-child(2) {
+  background: pink;
+  margin: -20px 0 -20px 40px;
+
+}
+div:nth-child(3) {
+  background: yellow;
+  margin-left: 80px;
+
+}

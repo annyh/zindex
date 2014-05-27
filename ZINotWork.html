@@ -1,0 +1,85 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Z-index not work</title>
+    <style type="text/css">
+ * {
+        margin: 0;
+        }
+      html {
+        padding: 20px;
+        font: 12px/20px Arial, sans-serif;
+        }
+      div {
+        opacity: 0.7;
+        position: relative;
+        }
+      h1 {
+        font: inherit;
+        font-weight: bold;
+        }
+      #div1, #div2 {
+        border: 1px dashed #696;
+        padding: 10px;
+        background-color: #cfc;
+        }
+      #div1 {
+        z-index: 5;
+        margin-bottom: 190px;
+        }
+      #div2 {
+        z-index: 2;
+        top: -40px;
+        }
+      #div3 {
+        z-index: 4;
+        opacity: 1;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        width: 300px;
+        border: 1px dashed #900;
+        background-color: #fdd;
+        padding: 40px 20px 15px 20px;
+        }
+      #div4, #div5 {
+        border: 1px dashed #996;
+        background-color: #ffc;
+        }
+      #div4 {
+        z-index: 6;
+        margin-bottom: 15px;
+        padding: 25px 10px 5px;
+        }
+     
+    </style>
+  </head>
+  <body>
+
+    <div id="div1">
+      <h1>div #1</h1>
+      <code>position: relative;<br/>
+      z-index: 5;</code>
+    </div>
+
+    <div id="div2">
+      <h1>div #2</h1>
+      <code>position: relative;<br/>
+      z-index: 2;</code>
+    </div>
+
+    <div id="div3">
+      <div id="div4">
+        <h1>div #4</h1>
+        <code>position: relative;<br/>
+        z-index: 6;</code>
+      </div>
+
+      <h1>div #3</h1>
+      <code>position: absolute;<br/>
+      z-index: 4;</code>
+
+    </div>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">Source</a></p>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+- first of all, who am I?
+- get expectations from the talk: "my goal in next 30 minutes is to increase knowledge of layering using CSS, and troubleshoot layering problems."
+
+demo: animation through layers
+http://webislove.com/download/css-animations/demo.html
+demo: layering pseudo elements
+http://jsbin.com/lefujaco/1/edit
+
+- default: z-index: auto. no overlap with normal flow, Browsers display content in the order that it's encountered; top stuff first, proceeding content lower down..
+if positioned, remove the element from the natural document flow.
+position: relative does 3 things [constrain positioning context to the parent element ]
+1. accept top/right/bottom/left values
+2. honor z-index
+3. if has absolutely positioned children, will be absolutely placed relative to parent
+
+if z-index is not "working", check element is positioned
+
+The z-index is so named because it affects an elements position along the z-axis. The higher the z-index of an element, the closer it becomes to the user, and the lower the z-index, the further back on the screen it appears.
+
+
+use relative or absolute positioning to move an object around the screen, we will end up with several elements occupying the same space. Which element is displayed on top is determined by the elements stacking order. We can adjust an elements stacking order by using the z-index property.
+
+
+z-index affects stacking order, and creates a stacking context. It does not move element between stacking contexts.
+
+
+When elements are positioned outside the normal flow, they can overlap other elements.
+- why troubleshooting layering problems can be a pain
+    - CSS3 properties
+
+inline elements: anchor tags, images and spans
+
+the key to making this effect happen is the "position" property... without it, the z-index; does nothing.. ; )﻿
+positioning:
+    - static: The default positioning for all elements is position:static, which means the element is not positioned and occurs where it normally would in the document.
+    - absolute elements: out of document flow, rest of page affected
+    absolute behaves like fixed except relative to the nearest positioned ancestor instead of relative to the viewport. can have relative parent and absolute child
+    - positioned relatively are part of the normal flow, can use top/left/right/bottom to move the element relative to where it would normally occur in the document. (http://www.barelyfitz.com/screencast/html-training/css/positioning/). rest of page behave as if element still occupied former space
+    - A fixed element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled,  does not leave a gap in the page where it would normally have been located.
+
+    - margin-top vs top: top and left apply only to positioned elements (elements with position set to anything other than static) while margin-top and margin-left apply to all elements except elements with table display types other than table-caption, table and inline-table.
+    ?  top behavior can differ depending on the type of position, absolute, relative or fixed.
+    -positioning demo differences: http://jsfiddle.net/NGLN/qbryN/
+
+how to solve positioning problems: changing the order of elements in your HTML, or positioning them accordingly.
+
+
+z-index: since CSS2.1
+also has values auto and inherit, for this presentation let's focus on integer values, since these cause the most confusion
+normal rendering layer (layer 0).
+z-index doesn't work globally, but only within a 'stacking context' (which has hard to digest definition in CSS),
+stacking without z-index: stacking order's other 4 layers
+z-index summary(http://stackoverflow.com/questions/14391208/how-does-z-index-really-work)
+
+how to show has created stacking context?
+    when global stacking context doesn't work
+    change div#3 properties on http://jsbin.com/hulucawe/1/edit
+DEMO THIS:
+    - max-value: z-index: caps at 2147483647 the largest positive value of a signed integer on a 32 bit operating systems [source: http://www.puidokas.com/max-z-index/]
+    - other properties that create stacking context:
+        DONE transform other than none; (ie. transform: rotate, http://stackoverflow.com/questions/20851452/z-index-is  -canceled-by-setting-transformrotate)
+            ie.     -webkit-transform: rotate(30deg);
+                    -moz-transform: rotate(30deg);
+                    -o-transform: rotate(30deg);
+                    transform: rotate(30deg);
+            “Any value other than ‘none’ for the transform results in the creation of both a stacking context and a containing block. The object acts as a containing block for fixed positioned descendants.” (http://www.w3.org/TR/css3-2d-transforms/)
+            possible explaination: "transforms are always *possibly* 3D transforms and therefore they are broken out of the normal DOM space and readied for 3D implementation."
+        filter -> -webkit-filter: blur(0) or -webkit-filter: opacity(.99)
+            nice effect, 47.96% browser support
+        opacity < 1; (try opacity >= 1)
+        Using perspective (with a value different from 0 or none) creates a new stacking context.
+            -webkit-perspective: 100px;
+        transform-style to preserve-3d (flat does not create stacking context?)
+            -webkit-transform-style: preserve-3d;
+        position: fixed (on chrome only. no stacking context created on FF)
+         flex item. Setting z-index on a flex item will always cause it to establish a stacking context even if it isn't positioned. 
+            z-index: 4;
+            opacity: 1; 
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+
+        not going to talk about due to low browser support
+            - Creating a CSS region: setting flow-from to anything other than none on an element whose content is anything other than normal.
+            - In paged media, each page-margin box establishes its own stacking context.
+                @page is not supported in Firefox
+        
+         [source: http://stackoverflow.com/questions/16148007/which-css-properties-create-a-stacking-context]
+
+
+
+----------------------------------------------------------------
+
+resources thank you cards demo 
+- 1 card flip with picture on 1 side and text on another http://jsbin.com/piqihake/1/edit
+- 1 card flip: http://jsbin.com/liwupotu/1/edit
+- basic templating with actual data http://jsbin.com/vuxesabu/1/edit
+- source: http://css3playground.com/3d-flip-cards/
+
+stack with neg z-index on pseudo elements: http://designshack.net/articles/css/use-pseudo-elements-to-create-an-image-stack-illusion/
+demo: http://dabblet.com/gist/2023431
+
+ring button:  http://designshack.net/articles/css/the-lowdown-on-before-and-after-in-css/
+demo: http://jsbin.com/megiyufo/1/edit
+
+bullseye; http://nicolasgallagher.com/multiple-backgrounds-and-borders-with-css2/
+demo: http://jsbin.com/namidoho/1/edit
+
+owl demo:
+- pseudo elements working on chrome 33? http://jsbin.com/gedovoxu/1/edit
+- picture of hootsuite owl http://1.bp.blogspot.com/-0w3i7SO1s3w/UdG4EflEmzI/AAAAAAAANBs/VpiBoVjFgVQ/s512/HootSuite-Normal-Owly.jpg

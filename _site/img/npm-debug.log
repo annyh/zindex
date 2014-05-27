@@ -1,0 +1,226 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'harp', '--global' ]
+2 info using npm@1.3.8
+3 info using node@v0.10.18
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'harp', null ]
+6 verbose cache add name=undefined spec="harp" args=["harp",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'harp',
+7 verbose parsed url   path: 'harp',
+7 verbose parsed url   href: 'harp' }
+8 silly lockFile 6ceb8962-harp harp
+9 verbose lock harp /home/anny/.npm/6ceb8962-harp.lock
+10 silly lockFile 6ceb8962-harp harp
+11 silly lockFile 6ceb8962-harp harp
+12 verbose addNamed [ 'harp', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 9f740fbd-harp harp@
+15 verbose lock harp@ /home/anny/.npm/9f740fbd-harp.lock
+16 silly addNameRange { name: 'harp', range: '*', hasData: false }
+17 verbose url raw harp
+18 verbose url resolving [ 'https://registry.npmjs.org/', './harp' ]
+19 verbose url resolved https://registry.npmjs.org/harp
+20 info trying registry request attempt 1 at 11:24:53
+21 verbose etag "33XR1C5K6T319VXDQ45NGGX0V"
+22 http GET https://registry.npmjs.org/harp
+23 http 304 https://registry.npmjs.org/harp
+24 silly registry.get cb [ 304,
+24 silly registry.get   { date: 'Sun, 25 May 2014 18:24:55 GMT',
+24 silly registry.get     server: 'Apache',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     'last-modified': 'Sun, 25 May 2014 18:24:55 GMT',
+24 silly registry.get     'cache-control': 'max-age=1',
+24 silly registry.get     etag: '"33XR1C5K6T319VXDQ45NGGX0V"',
+24 silly registry.get     'x-served-by': 'cache-lax1428-LAX',
+24 silly registry.get     'x-cache': 'MISS',
+24 silly registry.get     'x-cache-hits': '0',
+24 silly registry.get     'x-timer': 'S1401042295.105150,VS0,VE158',
+24 silly registry.get     vary: 'Accept',
+24 silly registry.get     'content-length': '0',
+24 silly registry.get     'keep-alive': 'timeout=10, max=50',
+24 silly registry.get     connection: 'Keep-Alive' } ]
+25 verbose etag harp from cache
+26 silly addNameRange number 2 { name: 'harp', range: '*', hasData: true }
+27 silly addNameRange versions [ 'harp',
+27 silly addNameRange   [ '0.1.0',
+27 silly addNameRange     '0.2.0',
+27 silly addNameRange     '0.2.1',
+27 silly addNameRange     '0.2.2',
+27 silly addNameRange     '0.2.3',
+27 silly addNameRange     '0.2.4',
+27 silly addNameRange     '0.2.5',
+27 silly addNameRange     '0.2.6',
+27 silly addNameRange     '0.3.0',
+27 silly addNameRange     '0.3.1',
+27 silly addNameRange     '0.3.2',
+27 silly addNameRange     '0.3.3',
+27 silly addNameRange     '0.3.4',
+27 silly addNameRange     '0.3.5',
+27 silly addNameRange     '0.3.6',
+27 silly addNameRange     '0.4.0',
+27 silly addNameRange     '0.4.1',
+27 silly addNameRange     '0.4.2',
+27 silly addNameRange     '0.4.3',
+27 silly addNameRange     '0.4.4',
+27 silly addNameRange     '0.4.5',
+27 silly addNameRange     '0.5.0',
+27 silly addNameRange     '0.5.1',
+27 silly addNameRange     '0.5.2',
+27 silly addNameRange     '0.5.3',
+27 silly addNameRange     '0.5.4',
+27 silly addNameRange     '0.5.5',
+27 silly addNameRange     '0.5.6',
+27 silly addNameRange     '0.6.0',
+27 silly addNameRange     '0.6.1',
+27 silly addNameRange     '0.6.2',
+27 silly addNameRange     '0.7.0',
+27 silly addNameRange     '0.7.1',
+27 silly addNameRange     '0.7.2',
+27 silly addNameRange     '0.7.3',
+27 silly addNameRange     '0.7.4',
+27 silly addNameRange     '0.7.5',
+27 silly addNameRange     '0.7.6',
+27 silly addNameRange     '0.7.7',
+27 silly addNameRange     '0.7.8',
+27 silly addNameRange     '0.7.9',
+27 silly addNameRange     '0.7.10',
+27 silly addNameRange     '0.8.0',
+27 silly addNameRange     '0.8.1',
+27 silly addNameRange     '0.8.2',
+27 silly addNameRange     '0.8.3',
+27 silly addNameRange     '0.8.4',
+27 silly addNameRange     '0.8.5',
+27 silly addNameRange     '0.8.6',
+27 silly addNameRange     '0.8.7',
+27 silly addNameRange     '0.8.8',
+27 silly addNameRange     '0.8.9',
+27 silly addNameRange     '0.8.10',
+27 silly addNameRange     '0.8.11',
+27 silly addNameRange     '0.8.12',
+27 silly addNameRange     '0.8.13',
+27 silly addNameRange     '0.9.0',
+27 silly addNameRange     '0.9.1',
+27 silly addNameRange     '0.9.2',
+27 silly addNameRange     '0.9.3',
+27 silly addNameRange     '0.9.4',
+27 silly addNameRange     '0.9.5',
+27 silly addNameRange     '0.10.0',
+27 silly addNameRange     '0.10.1',
+27 silly addNameRange     '0.11.0',
+27 silly addNameRange     '0.11.1',
+27 silly addNameRange     '0.11.2',
+27 silly addNameRange     '0.12.0',
+27 silly addNameRange     '0.12.1' ] ]
+28 verbose addNamed [ 'harp', '0.12.1' ]
+29 verbose addNamed [ '0.12.1', '0.12.1' ]
+30 silly lockFile 3fdc81a0-harp-0-12-1 harp@0.12.1
+31 verbose lock harp@0.12.1 /home/anny/.npm/3fdc81a0-harp-0-12-1.lock
+32 silly lockFile 3fdc81a0-harp-0-12-1 harp@0.12.1
+33 silly lockFile 3fdc81a0-harp-0-12-1 harp@0.12.1
+34 silly lockFile 9f740fbd-harp harp@
+35 silly lockFile 9f740fbd-harp harp@
+36 silly resolved [ { name: 'harp',
+36 silly resolved     version: '0.12.1',
+36 silly resolved     description: 'Static web server with built in preprocessing',
+36 silly resolved     author: { name: 'Brock Whitten', email: 'brock@chloi.io' },
+36 silly resolved     contributors:
+36 silly resolved      [ [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object] ],
+36 silly resolved     keywords:
+36 silly resolved      [ 'static web server',
+36 silly resolved        'static site generator',
+36 silly resolved        'sass',
+36 silly resolved        'less',
+36 silly resolved        'stylus',
+36 silly resolved        'markdown',
+36 silly resolved        'jade',
+36 silly resolved        'ejs',
+36 silly resolved        'coffeescript' ],
+36 silly resolved     homepage: 'http://harpjs.com',
+36 silly resolved     bugs: { url: 'http://github.com/sintaxi/harp/issues' },
+36 silly resolved     main: './lib/index.js',
+36 silly resolved     repository: { type: 'git', url: 'https://github.com/sintaxi/harp.git' },
+36 silly resolved     dependencies:
+36 silly resolved      { terraform: '0.7.0',
+36 silly resolved        commander: '2.0.0',
+36 silly resolved        connect: '2.9.0',
+36 silly resolved        'fs-extra': '0.6.4',
+36 silly resolved        async: '0.2.9',
+36 silly resolved        mime: '1.2.11',
+36 silly resolved        'download-github-repo': '0.1.0',
+36 silly resolved        'envy-json': '0.2.0' },
+36 silly resolved     devDependencies:
+36 silly resolved      { mocha: '1.8.1',
+36 silly resolved        should: '3.1.2',
+36 silly resolved        request: '2.30.0',
+36 silly resolved        cheerio: '~0.13.1',
+36 silly resolved        nixt: '~0.3.0' },
+36 silly resolved     scripts: { test: 'mocha --reporter spec -t 5000' },
+36 silly resolved     license: 'MIT',
+36 silly resolved     preferGlobal: true,
+36 silly resolved     readmeFilename: 'README.md',
+36 silly resolved     bin: { harp: './bin/harp' },
+36 silly resolved     engines: { node: '>=0.8' },
+36 silly resolved     readme: '# Harp\n\n> zero-configuration web server with built in pre-processing\n\n### What is Harp?\n\nHarp is a static web server that also serves Jade, Markdown, EJS, Less, Stylus, Sass, and CoffeeScript **as** HTML, CSS, and JavaScript without any configuration. It supports the beloved layout/partial paradigm and it has flexible metadata and global objects for traversing the file system and injecting custom data into templates. Optionally, Harp can also compile your project down to static assets for hosting behind any valid HTTP server.\n\n### Why?\n\nPre-compilers are becoming extremely powerful and shipping front-ends as static assets has many upsides. It\'s simple, it\'s easy to maintain, it\'s low risk, easy to scale, and requires low cognitive overhead. I wanted a lightweight web server that was powerful enough for me to abandon web frameworks for dead simple front-end publishing.\n\n### Features\n\n- easy installation, easy to use\n- fast and lightweight\n- robust (clean urls, intelligent path redirects)\n- built in pre-processing\n- first-class layout and partial support\n- built in LRU caching in production mode\n- can export assets to HTML/CSS/JS\n- does not require a build steps or grunt task\n- fun to use\n\n### Supported Pre-Processors\n\n|                 | Language Superset                                                 | Whitespace Sensitive  \n| --------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------\n| **HTML**        | [EJS](http://embeddedjs.com/)                                     | [Jade](http://jade-lang.com/), [Markdown](http://daringfireball.net/projects/markdown/)\n| **CSS**         | [LESS](http://lesscss.org/), [Sass (SCSS)](http://sass-lang.com/) | [Stylus](http://learnboost.github.io/stylus/)\n| **JavaScript**  | (TBD)                                                             | [CoffeeScript](http://coffeescript.org/)\n\n### Resources\n\n- **Server Documentation** - [harpjs.com/docs/](http://harpjs.com/docs/)\n- **Platform Documentation** - [harp.io/docs](https://harp.io/docs)\n- **Source Code** - [github.com/sintaxi/harp](https://github.com/sintaxi/harp)\n\n\nAuthored and maintained by [@sintaxi](http://twitter.com/sintaxi). Made for the [@HarpPlatform](http://twitter.com/HarpPlatform).\n\n---\n\n### Installation\n\n    sudo npm install -g harp\n\n### Quick Start\n\nCreating a new harp application is a breeze...\n\n    harp init myproj\n    harp server myproj\n\nYour Harp application is now running at [http://localhost:9000]()\n\n---\n\n## Documentation\n\nHarp can be used as a library or as a command line utility.\n\n### CLI Usage\n\n    Usage: harp [command] [options]\n\n    Commands:\n\n      init [path]                 initalize new harp application (defaults to current directory)\n      server [path] [options]     start harp server\n      compile [path] [options]    compile project to static assets\n      multihost [path] [options]  start harp server to host directory of harp apps\n\n    Options:\n\n      -h, --help     output usage information\n      -V, --version  output the version number\n\nStart the server in root of your application by running...\n\n    harp server\n\nYou may optionally supply a port to listen on...\n\n    harp server --port 8002\n\nCompile an application from the root of your application by running...\n\n    harp compile\n\nYou may optionally pass in a path to where you want the compiled assets to go...\n\n    harp compile --output /path/to/cordova/project/www\n\n### Lib Usage\n\nYou may also use harp as a node library for compiling or running as a server.\n\nServe up a harp application...\n\n```js\nvar harp = require("harp")\nharp.server(projectPath [,args] [,callback])\n```\n\n**Or** compile harp application\n\n```js\nvar harp = require("harp")\nharp.compile(projectPath [,outputPath] [, callback])\n```\n\n**Or** use as Connect/ExpressJS middleware\n\n```js\nvar express = require("express");\nvar harp = require("harp");\nvar app = express();\n\napp.configure(function(){\n  app.use(express.static(__dirname + "/public"));\n  app.use(harp.mount(__dirname + "/public"));\n});\n```\n\n## Contributing\n\n### Bug Fixes\n\nIf you find a bug you would like fixed. Open up a [ticket](https://github.com/sintaxi/harp/issues/new) with a detailed description of the bug and the expected behaviour. If you would like to fix the problem yourself please do the following steps.\n\n1. Fork it.\n2. Create a branch (`git checkout -b fix-for-that-thing`)\n3. Commit a failing test (`git commit -am "adds a failing test to demonstrate that thing"`)\n3. Commit a fix that makes the test pass (`git commit -am "fixes that thing"`)\n4. Push to the branch (`git push origin fix-for-that-thing`)\n5. Open a [Pull Request](https://github.com/sintaxi/harp/pulls)\n\nPlease keep your branch up to date by rebasing upstream changes from master.\n\n### New Functionality\n\nIf you wish to add new functionality to harp, please provide [@sintaxi](mailto:brock@sintaxi.com) a harp application that demonstrates deficiency in current design or desired additional behaviour. You may also submit a pull request with the steps above.\n\n## License\n\nCopyright 2012–2014 Chloi Inc. All rights reserved.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/a0e15683fd92ec96089118f483a112cf "githalytics.com")](http://githalytics.com/sintaxi/harp)',
+36 silly resolved     _id: 'harp@0.12.1',
+36 silly resolved     _from: 'harp@' } ]
+37 info install harp@0.12.1 into /usr/lib
+38 info installOne harp@0.12.1
+39 info /usr/lib/node_modules/harp unbuild
+40 verbose tar unpack /home/anny/.npm/harp/0.12.1/package.tgz
+41 silly lockFile 1857d8a1-tar-usr-lib-node-modules-harp tar:///usr/lib/node_modules/harp
+42 verbose lock tar:///usr/lib/node_modules/harp /home/anny/.npm/1857d8a1-tar-usr-lib-node-modules-harp.lock
+43 silly lockFile a991d2e8-anny-npm-harp-0-12-1-package-tgz tar:///home/anny/.npm/harp/0.12.1/package.tgz
+44 verbose lock tar:///home/anny/.npm/harp/0.12.1/package.tgz /home/anny/.npm/a991d2e8-anny-npm-harp-0-12-1-package-tgz.lock
+45 silly gunzTarPerm modes [ '755', '644' ]
+46 error Error: EACCES, mkdir '/usr/lib/node_modules/harp'
+46 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/harp']
+46 error   errno: 3,
+46 error   code: 'EACCES',
+46 error   path: '/usr/lib/node_modules/harp',
+46 error   fstream_type: 'Directory',
+46 error   fstream_path: '/usr/lib/node_modules/harp',
+46 error   fstream_class: 'DirWriter',
+46 error   fstream_stack:
+46 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+46 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
+46 error      'Object.oncomplete (fs.js:107:15)' ] }
+47 error Please try running this command again as root/Administrator.
+48 error System Linux 3.5.0-23-generic
+49 error command "/usr/bin/node" "/usr/bin/npm" "install" "harp" "--global"
+50 error cwd /home/anny/talks
+51 error node -v v0.10.18
+52 error npm -v 1.3.8
+53 error path /usr/lib/node_modules/harp
+54 error fstream_path /usr/lib/node_modules/harp
+55 error fstream_type Directory
+56 error fstream_class DirWriter
+57 error code EACCES
+58 error errno 3
+59 error stack Error: EACCES, mkdir '/usr/lib/node_modules/harp'
+60 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+60 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
+60 error fstream_stack Object.oncomplete (fs.js:107:15)
+61 verbose exit [ 3, true ]
