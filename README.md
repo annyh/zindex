@@ -1,4 +1,5 @@
-# About
+CSS Brigade talk on z-index and layering with CSS, slides using pow
+Meetup date: May 29, 2014
 
 POW is a simple presentation system for HTML5.
 
