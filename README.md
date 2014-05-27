@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CSS Brigade talk on z-index and layering with CSS, slides using pow
 Meetup date: May 29, 2014
 
@@ -29,3 +30,9 @@ The markup for a simple presentation looks like this:
         </div>
     </body>
     </html>
+=======
+zindex
+======
+
+CSS Brigade talk on z-index and layering with CSS
+>>>>>>> 6900ca926c8b975cca6e727b1bbb997e6a95eabb
