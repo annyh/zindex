@@ -1,75 +1,104 @@
 <!DOCTYPE>
 <html>
-  <head>
+
+<head>
     <title>Position: fixed on Chrome creates a stacking context</title>
     <style type="text/css">
-* {
-  margin: 0;
-}
-html {
-  padding: 20px;
-  font: 12px/20px Arial, sans-serif;
-}
-div {
-  opacity: 0.7;
-  position: relative;
-}
-h1 {
-  font: inherit;
-  font-weight: bold;
-}
-#div1{
-  border: 1px dashed #696;
-  padding: 10px;
-  background-color: #cfc;
-}
-#div1 {
-  z-index: 5;
-  margin-bottom: 190px;
-  opacity: 1;
-  width: 200px;
-}
-#div3 {
-  opacity: 1;
-  position: fixed;
-  top: 40px;
-  width: 300px;
-  border: 1px dashed #900;
-  background-color: #fdd;
-  padding: 40px 20px 20px;
-}
-#div4 {
-  border: 1px dashed #996;
-  background-color: #ffc;
-}
-#div4 {
-  z-index: 6;
-  margin-bottom: 15px;
-  padding: 25px 10px 5px;
-}
+    * {
+        margin: 0;
+    }
+    html {
+        padding: 20px;
+        font: 12px/20px Arial, sans-serif;
+    }
+    h1 {
+        font: inherit;
+        font-weight: bold;
+    }
+    #div1 {
+        border: 1px dashed #696;
+        padding: 10px;
+        background-color: #cfc;
+        position: relative;
+        z-index: 5;
+        margin-bottom: 190px;
+        opacity: 1;
+        width: 200px;
+    }
+    #div3 {
+        opacity: 1;
+        position: fixed;
+        top: 40px;
+        width: 300px;
+        border: 1px dashed #900;
+        background-color: #fdd;
+        padding: 40px 20px 20px;
+    }
+    #div4 {
+        border: 1px dashed #996;
+        background-color: #ffc;
+        position: relative;
+        z-index: 6;
+        margin-bottom: 15px;
+        padding: 25px 10px 5px;
+    }
+    .left {
+        float: left;
+        width: 30%;
+    }
+    style {
+        float: right;
+        width: 200px;
+        display: block;
+        background: #333;
+        color: white;
+        padding: 20px;
+        white-space: pre;
+    }
+    @media all and (max-width: 550px) {
+        style {
+            display: none;
+        }
+    }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
+<div class="left">
 
     <div id="div1">
-      <h1>Division Element #1</h1>
-      <code>position: relative;<br/>
-      z-index: 5;</code>
+        <h1>Division Element #1</h1>
+        <code>position: relative;
+            <br/>z-index: 5;</code>
     </div>
 
 
     <div id="div3">
-      <div id="div4">
-        <h1>Division Element #4</h1>
-        <code>position: relative;<br/>
-        z-index: 6;</code>
-      </div>
+        <div id="div4">
+            <h1>Division Element #4</h1>
+            <code>position: relative;
+                <br/>z-index: 6;</code>
+        </div>
 
-      <h1>Division Element #3</h1>
-      <code>position: fixed;</code>
-
-
+        <h1>Division Element #3</h1>
+        <code>position: fixed;</code>
     </div>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">Source</a></p>
-  </body>
+
+</div>
+    <style contenteditable>
+    #div3 {
+        opacity: 1;
+        position: fixed;
+        top: 40px;
+        width: 300px;
+        border: 1px dashed #900;
+        background-color: #fdd;
+        padding: 40px 20px 20px;
+    }
+    </style>
+
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">Source</a>
+    </p>
+</body>
+
 </html>

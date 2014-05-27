@@ -4,20 +4,68 @@
 <head>
     <meta charset="utf-8">
     <title>Layering without z-index</title>
-    <link rel="stylesheet" type="text/css" href="css/noPos.css">
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    *, *:before, *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .main div {
+        width: 200px;
+        height: 100px;
+        padding: 5px;
+        position: relative;
+    }
+    .main div:first-child {
+        background: red;
+    }
+    .main div:nth-child(2) {
+        background: pink;
+        margin: -20px 0 -20px 40px;
+    }
+    .main div:nth-child(3) {
+        background: yellow;
+        margin-left: 80px;
+    }
+    .main, .sidebar {
+        float: left;
+        padding: 20px;
+        width: 50%;
+    }
+    </style>
 </head>
 
 <body>
-    <div>
-        <span>unpositioned elements</span>
+    <div class="main">
+        <div>
+            <span>unpositioned elements</span>
+        </div>
+        <div>
+            <span>are rendered according to</span>
+        </div>
+        <div>
+            <span>order of appearance</span>
+        </div>
     </div>
-    <div>
-        <span>are rendered according to</span>
+    <div class="sidebar">
+        <pre>
+        &lt;div&gt;
+            &lt;span&gt;unpositioned elements&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;span&gt;are rendered according to&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;span&gt;order of appearance&lt;/span&gt;
+        &lt;/div&gt;
+              </pre>
     </div>
-    <div>
-        <span>order of appearance</span>
-    </div>
-    <p><a href="http://jsbin.com/dalenabu/2/edit" target="_blank">Edit source</a></p>
+    <p><a href="http://jsbin.com/dalenabu/2/edit" target="_blank">Edit source</a>
+    </p>
 
 </body>
 
