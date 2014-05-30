@@ -26,7 +26,7 @@
 		font: inherit;
 		font-weight: bold;
 	}
-	#div1, #div2 {
+	#div1{
 		border: 1px dashed #696;
 		padding: 10px;
 		background-color: #cfc;
@@ -34,10 +34,6 @@
 	#div1 {
 		z-index: 5;
 		margin-bottom: 190px;
-	}
-	#div2 {
-		z-index: 2;
-		top: -40px;
 	}
 	#div3 {
 		z-index: 4;
@@ -69,11 +65,6 @@
 				position: relative; z-index: 5;
 			</div>
 
-			<div id="div2">
-				<h1>div #2</h1>
-				position: relative; z-index: 2;
-			</div>
-
 			<div id="div3">
 				<div id="div4">
 					<h1>div #4</h1>
@@ -85,18 +76,10 @@
 			</div>
 		</div>
 		<div class="sidebar">
-			<pre>
-<code>
-	&lt;div id="div1"&gt;
+<pre><code>&lt;div id="div1"&gt;
 	  &lt;h1&gt;div #1&lt;/h1&gt;
 	  position: relative;
 	  z-index: 5;
-	&lt;/div&gt;
-
-	&lt;div id="div2"&gt;
-	  &lt;h1&gt;div #2&lt;/h1&gt;
-	  position: relative;
-	  z-index: 2;
 	&lt;/div&gt;
 
 	&lt;div id="div3"&gt;

@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>Relative Position CSS</title>
-  <style type="text/css">
-body, p {
-  margin: 0;
-  padding: 0;
-}
-
-.posAbsolute {
-  background-color: green;
-  width: 150px;
-  height: 50px;
-  position: absolute;
-  color: #fff;
-  bottom: 0;
-  left: 0;
-}
-
-.relative2 {
-  position: relative;
-  border: 2px dotted #eee;
-  height: 200px;
-  top: 30px;  
-  left: 60px;
-  width: 80%;
-  background-color: orange;
-}
-  </style>
+    <meta charset="utf-8">
+    <title>Relative Position CSS</title>
+    <style type="text/css">
+    body, p {
+        margin: 0;
+        padding: 0;
+    }
+    .normal {
+      height: 140px;
+      border: 2px solid black;
+    }
+    .posAbsolute {
+        background-color: green;
+        width: 150px;
+        height: 50px;
+        position: absolute;
+        color: #fff;
+        bottom: 0;
+        left: 0;
+    }
+    .relative2 {
+        position: relative;
+        border: 2px dotted #eee;
+        height: 200px;
+        top: 30px;
+        left: 60px;
+        width: 80%;
+        background-color: orange;
+    }
+    </style>
 </head>
-<body>
 
-  <div class="relative2">
-    <p>position: relative.</p>
-    <p>position: relative does 3 things:</p>
-  <ol>
-    <li>enables top/left/bottom/right</li>
-    <li>enables z-index</li>
-    <li>descendant with position: absolute; is positioned relative to nearest position: relative; ancestor</li>
-  </ol>
-    <div class="posAbsolute">Absolutely positioned relative to ancestor</div>
-  </div>
+<body>
+    <div class="relative2">
+        <p>position: relative.</p>
+        <p>position: relative does 3 things:</p>
+        <ol>
+            <li>enables top/left/bottom/right</li>
+            <li>enables z-index</li>
+            <li>descendant with position: absolute; is positioned relative to nearest position: relative; ancestor</li>
+        </ol>
+        <div class="posAbsolute">Absolutely positioned relative to ancestor</div>
+    </div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>    
 </body>
+
 </html>

@@ -46,34 +46,39 @@
         padding: 20px;
         white-space: pre;
     }
+    p {
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+    }
     @media all and (max-width: 550px) {
         style {
             display: none;
         }
-    }    
+    }
     </style>
 </head>
 
 <body>
-<div class="left">
+    <div class="left">
 
-    <div id="div1">
-        <h1>Division Element #1</h1>
-        <code>position: relative;
-            <br/>z-index: 5;</code>
-    </div>
-
-    <div id="div3">
-        <div id="div4">
-            <h1>Division Element #4</h1>
+        <div id="div1">
+            <h1>Division Element #1</h1>
             <code>position: relative;
-                <br/>z-index: 6;</code>
+                <br/>z-index: 5;</code>
         </div>
 
-        <h1>Division Element #3</h1>
-        <code>opacity: 0.9;</code>
+        <div id="div3">
+            <div id="div4">
+                <h1>Division Element #4</h1>
+                <code>position: relative;
+                    <br/>z-index: 6;</code>
+            </div>
+
+            <h1>Division Element #3</h1>
+            <code>opacity: 0.9;</code>
+        </div>
     </div>
-</div>
     <style contenteditable>
     #div3 {
         opacity: 0.9;
@@ -85,7 +90,8 @@
     }
     </style>
 
-    <p><a href="http://jsbin.com/gavokure/6/edit">Edit source</a>
+
+        <p>Even if the element is not positioned! If an element with opacity less than 1 is not positioned, paint the layer it creates as if it were a positioned element with z-index: 0 and opacity: 1.</p>
     </p>
 
 </body>

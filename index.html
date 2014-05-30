@@ -8,17 +8,19 @@
 
 <body>
     <div id="slides">
-        <div class="slide title">
+        <div class="slide title" style="background: url(img/stacked.jpg); background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: left top;">
             <h1>Z-index and Layering with CSS</h1>
         </div>
         <div class="slide">
-            <h3>Before we start</h3>
-            <p>
-                <img class="full" src="img/stackoverflow.png">
+            <h2>Why give a hoot about z-index?</h2>
+            <iframe src="owl.html"></iframe>
+            <p><a href="http://jsbin.com/ceqobegi/1/edit" target="_blank">edit source</a>
             </p>
         </div>
         <div class="slide">
-            <h3>Agenda</h3>
+            <h2>Agenda</h2>
             <ul>
                 <li>Z-index and positioning</li>
                 <li>What is stacking order?</li>
@@ -29,7 +31,7 @@
         </div>
 
         <div class="slide">
-            <h3>What's z-index used for?</h3>
+            <h2>What's z-index used for?</h2>
             <p>
                 <img class="half" src="img/graphical-z-index.png">
                 <img class="half" src="img/basic-z-index.gif">
@@ -37,68 +39,78 @@
             <p>Z-index changes stacking order and creates a stacking context.</p>
         </div>
         <div class="slide">
-            <h3>Normal document flow</h3>
-            <p>To use z-index, need positioning. Can elements overlap if there's no positioning?</p>
+            <h2>Normal document flow</h2>
+            <p>Layering without positioning</p>
             <iframe src="noPos.html"></iframe>
+            <p><a href="http://jsbin.com/dalenabu/2/edit">Edit Source</a>
             </p>
         </div>
         <div class="slide">
-            <h3>What is positioned?</h3>
+            <h2>What is positioned?</h2>
             <p>z-index applies only to objects that have the position property set to fixed, absolute, or relative, aka "positioned elements".</p>
             <p>On positioned elements, can use top/left/right/bottom to nudge element to corners, and z-index.</p>
         </div>
         <div class="slide">
             <pre><code class="html">position: fixed;</code></pre>
             <iframe src="posFixed.html"></iframe>
+
+            <p><a href="http://jsbin.com/juwazona/4/edit" target="_blank">Edit source</a>
             </p>
         </div>
 
         <div class="slide">
             <pre><code class="html">position: absolute;</code></pre>
             <iframe src="absPos.html"></iframe>
+            <p><a href="http://jsbin.com/megeguya/3/edit">Edit source</a>
+            </p>
         </div>
 
         <div class="slide">
             <pre><code class="html">position: relative;</code></pre>
             <iframe src="relPos.html"></iframe>
-            <p><a href="http://jsbin.com/meqahumo/3/edit">Edit source</a></p>
+            <p><a href="http://jsbin.com/meqahumo/3/edit">Edit source</a>
+            </p>
         </div>
 
-        <div class="slide">
-            <h3>Default stacking order</h3>
+        <div class="slide editBottom">
+            <h2>Default stacking order</h2>
             <div>
                 <img src="img/defaultStack.png" alt="default Stacking order">
             </div>
-            <p><a href="http://jsbin.com/betuqoni/2/edit">Edit source code.</a></p>
         </div>
         <div class="slide">
-            <h3>Stacking order with z-index</h3>
+            <h2>Stacking order with z-index</h2>
             <div>
                 <img src="img/stackOrderZindex.png" alt="Stacking order with z-index">
             </div>
-            <p><a href="http://jsbin.com/zotonuye/2/edit">Edit source code.</a></p>
         </div>
         <div class="slide">
-            <h3>Change layering with CSS only</h3>
+            <h2>Change layering with CSS only</h2>
             <iframe src="zindexBasic.html"></iframe>
-            <p><a href="http://jsbin.com/xecokapo/2/edit">Edit source code.</a></p>
+            <p><a href="http://jsbin.com/xecokapo/2/edit">Edit source.</a>
+            </p>
         </div>
         <!-- -->
         <div class="slide">
-            <h3>Why does z-index 'not work?'</h3>
+            <h2>Why does z-index 'not work?'</h2>
             <iframe src="ZINotWork.html"></iframe>
-            <p><a href="http://jsbin.com/huluhava/2/edit">Edit source code.</a></p>
+            <p><a href="http://jsbin.com/huluhava/5/edit">Edit source.</a>
+            </p>
         </div>
 
         <div class="slide">
-            <h3>Answer: stacking context on div#3</h3>
+            <h2>Answer: stacking context on div#3</h2>
             <p>Stacking context is a group of elements with a common parent that move forward or backward together (atomically) in the stacking order.
                 <img src="img/stacking-contexts1.png">
             </p>
         </div>
 
         <div class="slide">
-            <h3>Which CSS properties create stacking context?</h3>
+            <h2>Stacking Context vs DOM</h2>
+            <p>Stacking context is a subset of DOM.</p>
+        </div>
+        <div class="slide">
+            <h2>Which CSS properties create stacking context?</h2>
             <ul>
                 <li>html
                     <html>
@@ -109,46 +121,79 @@
         </div>
 
 
-        <!-- -->
         <div class="slide">
-            <h3>CSS Filter creates a stacking context</h3>
+            <p data-height="768" data-theme-id="0" data-slug-hash="ftnDd" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/rss/pen/ftnDd/'>CSS(webkit) filters</a> by Rıza Selçuk Saydam (<a href='http://codepen.io/rss'>@rss</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            <script async src="//codepen.io/assets/embed/ei.js"></script>
+        </div>
+
+        <div class="slide">
+            <h2>CSS Filter creates a stacking context</h2>
             <iframe src="cssFilter.html"></iframe>
             <p><a href="http://jsbin.com/walonigu/5/edit">Edit source</a>
             </p>
         </div>
 
         <div class="slide">
-            <h3>Position: fixed on Chrome creates a stacking context</h3>
+            <p data-height="768" data-theme-id="0" data-slug-hash="lykCe" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/grayghostvisuals/pen/lykCe/'>Opacity : CSS-Tricks Almanac </a> by Dennis Gaebel (<a href='http://codepen.io/grayghostvisuals'>@grayghostvisuals</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            <script async src="//codepen.io/assets/embed/ei.js"></script>
+        </div>
+
+        <div class="slide">
+            <h2>Opacity &lt; 1 creates a stacking context</h2>
+            <iframe src="opacitySC.html"></iframe>
+            <p><a href="http://jsbin.com/gavokure/6/edit">Edit source</a>
+
+        </div>
+
+
+        <div class="slide">
+            <h2>Position: fixed on Chrome creates a stacking context</h2>
             <iframe src="posFixedChorome.html"></iframe>
             <p><a href="http://jsbin.com/zatokogo/2/edit">Edit source</a>
             </p>
         </div>
 
         <div class="slide">
-            <h3>Opacity &lt; 1 creates a stacking context</h3>
-            <p>Even if the element is not positioned! If an element with opacity less than 1 is not positioned, paint the layer it creates as if it were a positioned element with z-index: 0 and opacity: 1.</p>
-            <iframe src="opacitySC.html"></iframe>
+            <p data-height="768" data-theme-id="0" data-slug-hash="GqLle" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/adrianparr/pen/GqLle/'>CSS 3D Transform - Card Flip</a> by Adrian Parr (<a href='http://codepen.io/adrianparr'>@adrianparr</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            <script async src="//codepen.io/assets/embed/ei.js"></script>
         </div>
 
         <div class="slide">
-            <h3>Transform other than none creates stacking context</h3>
+            <h2>Transform other than none creates stacking context</h2>
             <iframe src="transformSC.html"></iframe>
+            <p><a href="http://jsbin.com/nuqojeno/4/edit">Edit source</a>
+            </p>
+
+        </div>
+
+        <div class="slide">
+            <p data-height="768" data-theme-id="0" data-slug-hash="pIgBf" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/impressivewebs/pen/pIgBf/'>pIgBf</a> by Louis Lazaris (<a href='http://codepen.io/impressivewebs'>@impressivewebs</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            <script async src="//codepen.io/assets/embed/ei.js"></script>
+        </div>
+
+        <div class="slide">
+            <h2>Transform-style: preserve-3d creates a stacking context</h2>
+            <iframe src="transform3DSC.html"></iframe>
+            <p><a href="http://jsbin.com/walonigu/10/edit">Edit source</a>
             </p>
         </div>
 
-        <div class="slide">
-            <h3>Transform-style: preserve-3d creates a stacking context</h3>
-            <iframe src="transform3DSC.html"></iframe>
 
+        <div class="slide">
+            <p data-height="768" data-theme-id="0" data-slug-hash="GLbca" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/HugoGiraudel/pen/GLbca/'>GLbca</a> by Hugo Giraudel (<a href='http://codepen.io/HugoGiraudel'>@HugoGiraudel</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            <script async src="//codepen.io/assets/embed/ei.js"></script>
         </div>
 
         <div class="slide">
-            <h3>CSS Perspective creates a stacking context</h3>
+            <h2>CSS Perspective creates a stacking context</h2>
             <iframe src="perspectiveSC.html"></iframe>
+            <p><a href="http://jsbin.com/jenijada/4/edit">Edit source</a>
+            </p>
+
         </div>
 
         <div class="slide">
-            <h3>Recap: stacking context vs stacking order</h3>
+            <h2>Recap: stacking context vs stacking order</h2>
             <p>
                 <img class="half" src="img/stacking-contexts1.png">
                 <img class="half" src="img/stacking-order-levels.png">
@@ -156,17 +201,17 @@
         </div>
 
         <div class="slide">
-            <h3>Troubleshooting CSS layering issues</h3>
+            <h2>Troubleshooting CSS layering issues</h2>
             <ul>
-                <li>Are elements you want to reorder part of the same stacking context?</li>
+                <li>To use z-index, position the element.</li>
+                <li>If elements are within the same stacking context, can use z-index.</li>
                 <li>Which ancestors are creating stacking contexts?</li>
-                <li>Is the element positioned?</li>
-                <li>Change elements' order in the DOM may be necessary.</li>
+                <li>If cannot change stacking context, reorder element in the DOM.</li>
             </ul>
         </div>
 
         <div class="slide">
-            <h3>CSS properties that cause stacking context</h3>
+            <h2>CSS properties that cause stacking context</h2>
             <ul>
                 <li>Position: fixed on Chrome</li>
                 <li>Z-index: integer with positioning</li>
@@ -178,27 +223,17 @@
             </ul>
         </div>
 
-        <div class="slide">
-            <h3></h3>
-
-        </div>
-
-        <div class="slide">
-            <h3></h3>
-
-        </div>
-
     </div>
 
     <!--
-	To use compiled sources: run ./build.py and then use this block of scripts
-	in place of the default.
+    To use compiled sources: run ./build.py and then use this block of scripts
+    in place of the default.
 
-	<script src="pow.js"></script>
-	<script src="pow.highlight.js"></script>
-	<script src="pow.mobile.js"></script>
-	<script src="pow.live.js"></script>
-	-->
+    <script src="pow.js"></script>
+    <script src="pow.highlight.js"></script>
+    <script src="pow.mobile.js"></script>
+    <script src="pow.live.js"></script>
+    -->
 
     <!-- Uncompiled dev sources: -->
     <script src="src/pow.init.js"></script>

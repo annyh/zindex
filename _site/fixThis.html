@@ -14,11 +14,6 @@
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
-	.main, .sidebar {
-		float: left;
-		padding: 20px;
-		width: 50%;
-	}
 	div {
 		position: relative;
 	}
@@ -30,36 +25,40 @@
 		border: 1px dashed #696;
 		padding: 10px;
 		background-color: #cfc;
-	}
-	#div1 {
 		z-index: 5;
 		margin-bottom: 190px;
 	}
-	#div3 {
-		z-index: 4;
-		opacity: 1;
-		position: absolute;
-		top: 40px;
-		left: 40px;
-		width: 300px;
-		border: 1px dashed #900;
-		background-color: #fdd;
-		padding: 40px 20px 15px 20px;
-	}
-	#div4, #div5 {
+
+	#div4{
 		border: 1px dashed #996;
 		background-color: #ffc;
-	}
-	#div4 {
 		z-index: 6;
 		margin-bottom: 15px;
 		padding: 25px 10px 5px;
 	}
+    .left {
+        float: left;
+        width: 30%;
+    }
+    style {
+        float: right;
+        width: 200px;
+        display: block;
+        background: #333;
+        color: white;
+        padding: 20px;
+        white-space: pre;
+    }	
+    @media all and (max-width: 550px) {
+        style {
+            display: none;
+        }
+    }	
 	</style>
 </head>
 
 <body>
-		<div class="main">
+		<div class="left">
 			<div id="div1">
 				<h1>div #1</h1>
 				position: relative; z-index: 5;
@@ -75,27 +74,19 @@
 				position: absolute; z-index: 4;
 			</div>
 		</div>
-		<div class="sidebar">
-<pre><code>&lt;div id="div1"&gt;
-	  &lt;h1&gt;div #1&lt;/h1&gt;
-	  position: relative;
-	  z-index: 5;
-	&lt;/div&gt;
-
-	&lt;div id="div3"&gt;
-	  &lt;div id="div4"&gt;
-		&lt;h1&gt;div #4&lt;/h1&gt;
-		position: relative;
-		z-index: 6;
-	  &lt;/div&gt;
-
-	  &lt;h1&gt;div #3&lt;/h1&gt;
-	  position: absolute;
-	  z-index: 4;
-	&lt;/div&gt;
-</code>
-			  </pre>
-	</div>
+		    <style contenteditable>
+	#div3 {
+		z-index: 4;
+		opacity: 1;
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		width: 300px;
+		border: 1px dashed #900;
+		background-color: #fdd;
+		padding: 40px 20px 15px 20px;
+	}
+    </style>
 </body>
 
 </html>
